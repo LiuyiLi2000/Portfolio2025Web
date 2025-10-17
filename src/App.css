@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at 20% 30%, #1e2a55, #0c1026 80%);
+  color: #f3f6ff; /* 柔白偏蓝的文字 */
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 120px 20px;
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 3.4rem;
+  font-weight: 600;
+  margin-bottom: 0.4em;
+  color: #c9d5e5;
+ 
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #f2c6b4; /* 珊瑚暖光点缀 */
+  margin-bottom: 0.8em;
+}
+
+p {
+  max-width: 640px;
+  margin: 0 auto;
+  color: #c9d5e5; /* 柔蓝灰文字 */
+  line-height: 1.7;
+}
+
+/* === Hero === */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: radial-gradient(circle at 40% 40%, #1b3b5f, #0c1026 80%);
+  overflow: hidden;
+}
+
+/* 添加轻微的流动光层 */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(142,197,252,0.25), rgba(224,195,252,0.25));
+  mix-blend-mode: screen;
+  filter: blur(60px);
+  animation: shimmer 8s ease-in-out infinite alternate;
+}
+
+@keyframes shimmer {
+  0% { transform: translate(-10%, -10%) scale(1); opacity: 0.6; }
+  100% { transform: translate(10%, 10%) scale(1.1); opacity: 0.9; }
+}
+
+.overlay {
+  background: rgba(15, 20, 40, 0.55);
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+/* === Projects === */
+.projects {
+  background: linear-gradient(180deg, #121a35 0%, #0c1026 100%);
+}
+
+.project-text {
+  color: #f2c6b4;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 50px;
+}
+
+.project-card {
+  width: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(28, 40, 75, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(142, 197, 252, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-decoration: none;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 45px rgba(224, 195, 252, 0.35);
+}
+
+.project-img {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.92);
+}
+
+.project-info {
+  color: #f2c6b4;
+  padding: 20px;
+}
+/* === About === */
+.about {
+
+  background: #f5f5f5; /* 灰白背景 */
+  text-align: left;
+  margin: 0 auto;
+  border-radius: 12px; /* 可选，增加柔和感 */
+}
+
+.about h2 {
+  color: #17264a;
+  text-align: center;   /* 标题居中 */
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #17264a;       /* 深蓝文字 */
+  text-align: left; /* 确保段落左对齐 */
+}
+/* === Contact === */
+.contact {
+  background: linear-gradient(180deg, #0c1026, #121a35);
+}
+
+.contact-btn {
+  display: inline-block;
+  margin-top: 30px;
+  background: linear-gradient(90deg, #8ec5fc, #e0c3fc);
+  color: #0d1b2a;
+  padding: 12px 26px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 18px rgba(142,197,252,0.35);
+}
+
+.contact-btn:hover {
+  background: linear-gradient(90deg, #b8e0ff, #f3d5ff);
+  box-shadow: 0 0 24px rgba(224,195,252,0.6);
+}
+
+/* === Smooth section fade === */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
