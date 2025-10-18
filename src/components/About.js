@@ -9,7 +9,7 @@ const About = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h2>About</h2>
+        <h2>ABOUT</h2>
         <p>
        I combine design intuition with front-end logic to build interfaces. 
        </p>

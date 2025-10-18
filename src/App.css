@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap");
 
 body {
   margin: 0;
@@ -52,6 +53,17 @@ p {
   overflow: hidden;
 }
 
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 3.8rem;
+  text-shadow: 0 0 18px rgba(242,198,180,0.4);
+  letter-spacing: 1px;
+}
+
+.hero p {
+   font-family: "Playfair Display", serif;
+}
 /* 添加轻微的流动光层 */
 .hero::before {
   content: "";
@@ -110,7 +122,7 @@ p {
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 16px 45px #edd9ff;
+  box-shadow: 0 16px 45px #f2c6b4;
 }
 
 .project-img {
@@ -127,10 +139,10 @@ p {
 /* === About === */
 .about {
 
-  background: #f5f5f5; /* 灰白背景 */
+   background: linear-gradient(180deg, #f5f5f5 0%, #a4ceea 130%); /* 灰白背景 */
   text-align: left;
   margin: 0 auto;
-  border-radius: 12px; /* 可选，增加柔和感 */
+ 
 }
 
 .about h2 {

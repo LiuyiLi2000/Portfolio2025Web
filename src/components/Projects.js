@@ -6,7 +6,7 @@ import proj3 from "../assets/project3.jpg";
 
 const projects = [
   {
-    title: "TotoPark Website",
+    title: "Toto Park Website",
     year: "2023",
     description:
       "An interactive landing page introducing Toronto’s outdoor parks. Built with HTML, CSS, and JavaScript to highlight playful and natural vibes.",
@@ -39,7 +39,7 @@ const Projects = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        Selected Works
+        PROJECTS 
       </motion.h2>
 
       <div className="project-grid">
