@@ -22,8 +22,7 @@ const Hero = () => {
           <h1>Liuyi Li</h1>
           <h2>Designer × Front-End Developer</h2>
           <p>
-            I design and build visually balanced experiences — 
-            where minimalism meets emotion.
+            I design and build visually balanced experiences.
           </p>
         </motion.div>
       </div>

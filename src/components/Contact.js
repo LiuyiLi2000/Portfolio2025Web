@@ -11,7 +11,7 @@ const Contact = () => {
       >
         <h2>Let's Connect</h2>
         <p>Feel free to reach out for collaborations or new ideas.</p>
-        <a href="mailto:liuyili@example.com" className="contact-btn">
+        <a href="mailto:liliuyi1224@gmail.com" className="contact-btn">
           Contact Me
         </a>
       </motion.div>

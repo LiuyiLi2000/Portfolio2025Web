@@ -82,7 +82,7 @@ p {
 
 /* === Projects === */
 .projects {
-  background: linear-gradient(180deg, #121a35 0%, #0c1026 100%);
+  background: linear-gradient(180deg, #164089 0%, #17264a 100%);
 }
 
 .project-text {
@@ -110,7 +110,7 @@ p {
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 16px 45px rgba(224, 195, 252, 0.35);
+  box-shadow: 0 16px 45px #edd9ff;
 }
 
 .project-img {
@@ -147,7 +147,7 @@ p {
 }
 /* === Contact === */
 .contact {
-  background: linear-gradient(180deg, #0c1026, #121a35);
+  background: linear-gradient(180deg, #17264a, #0c1026);
 }
 
 .contact-btn {
@@ -169,7 +169,7 @@ p {
 }
 /* === Contact === */
 .footer {
-  background-color: #0c1026; /* 和你的作品集主题一致 */
+  background-color: #0c1026; 
   color: #f2c6b4;
   padding: 40px 20px;
   text-align: center;
