@@ -44,54 +44,106 @@ p {
 
 /* === Hero === */
 .hero {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 75vh;
   position: relative;
-  background: radial-gradient(circle at 40% 40%, #1b3b5f, #0c1026 80%);
+  overflow: hidden;
+  font-family: "Playfair Display", serif;
+}
+
+/* 背景层（右侧淡入） */
+.hero-bg {
+  position: absolute;
+  inset: 0;
   overflow: hidden;
 }
 
-.hero h1 {
-  font-family: "Playfair Display", serif;
-  font-weight: 700;
-  font-size: 3.8rem;
-  text-shadow: 0 0 18px rgba(242,198,180,0.4);
-  letter-spacing: 1px;
+.hero-bg img {
+  position: absolute;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+  mix-blend-mode: lighten;
+  filter: saturate(1.1) brightness(1.2);
 }
 
-.hero p {
-   font-family: "Playfair Display", serif;
-}
-/* 添加轻微的流动光层 */
-.hero::before {
+/* 轻微蓝紫光层 shimmer */
+/*.hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(142,197,252,0.25), rgba(224,195,252,0.25));
+  background: linear-gradient(
+    120deg,
+    rgba(142, 197, 252, 0.25),
+    rgba(224, 195, 252, 0.25)
+  );
   mix-blend-mode: screen;
   filter: blur(60px);
   animation: shimmer 8s ease-in-out infinite alternate;
+}*/
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    rgba(255, 255, 255, 0.16),   /* ✨ 中心亮度轻微降低 */
+    rgba(255, 255, 255, 0.08) 12%, /* 柔和边缘 */
+    transparent 18%               /* 🎯 光圈更小、更聚焦 */
+  );
+  mix-blend-mode: screen;
+  pointer-events: none;
+  transition: background 0.25s ease-out;
+  filter: blur(32px);  /* 柔光扩散但不发糊 */
 }
+
+
 
 @keyframes shimmer {
   0% { transform: translate(-10%, -10%) scale(1); opacity: 0.6; }
   100% { transform: translate(10%, 10%) scale(1.1); opacity: 0.9; }
 }
 
-.overlay {
-  background: rgba(15, 20, 40, 0.55);
-  width: 100%;
-  height: 100%;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* 前景内容（左下角） */
+.hero-content {
+  position: relative;
   z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 0% 8%;
 }
 
+/* 文字样式 */
+.hero-text h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 0 18px rgba(242, 198, 180, 0.4);
+  letter-spacing: 2px;
+  color: #f6e9e0; /* 柔和暖白金感 */
+}
+
+.hero-text h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #d6d8e5;
+  margin-top: 12px;
+  letter-spacing: 1px;
+}
+
+.hero-text p {
+  font-family: "Playfair Display", serif;
+  margin-top: 24px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #cbd5f2;
+  opacity: 0.85;
+  max-width: 480px;
+}
 /* === Projects === */
 .projects {
   background: linear-gradient(180deg, #164089 0%, #17264a 100%);

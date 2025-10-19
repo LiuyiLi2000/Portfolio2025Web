@@ -1,29 +1,45 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import bg from "../assets/hero-bg.jpg"; 
+import bg from "../assets/hero-bg.jpg";
 
 const Hero = () => {
+  useEffect(() => {
+    const hero = document.querySelector(".hero");
+
+    const handleMove = (e) => {
+      const x = (e.clientX / window.innerWidth) * 100;
+      const y = (e.clientY / window.innerHeight) * 100;
+      hero.style.setProperty("--x", `${x}%`);
+      hero.style.setProperty("--y", `${y}%`);
+    };
+
+    hero.addEventListener("mousemove", handleMove);
+
+    // ✅ 清除事件监听
+    return () => {
+      hero.removeEventListener("mousemove", handleMove);
+    };
+  }, []);
+
   return (
-    <section
-      id="hero"
-      className="hero"
-      style={{
-        backgroundImage: `url(${bg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <div className="overlay">
+    <section id="hero" className="hero">
+      {/* 背景与光效层 */}
+      <div className="hero-bg">
+        <img src={bg} alt="Hero background" />
+        <div className="hero-overlay"></div>
+      </div>
+
+      {/* 前景内容 */}
+      <div className="hero-content">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          className="hero-text"
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
-          <h1>Liuyi Li</h1>
+          <h1>LIUYI LI</h1>
           <h2>Designer × Front-End Developer</h2>
-          <p>
-            I design and build visually balanced experiences.
-          </p>
+          <p>I design and build visually balanced experiences.</p>
         </motion.div>
       </div>
     </section>
