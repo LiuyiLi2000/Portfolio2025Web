@@ -6,14 +6,6 @@ import proj3 from "../assets/project3.jpg";
 
 const projects = [
   {
-    title: "Toto Park Website",
-    year: "2023",
-    description:
-      "An interactive landing page introducing Toronto’s outdoor parks. Built with HTML, CSS, and JavaScript to highlight playful and natural vibes.",
-    img: proj1,
-    link: "https://liuyili2000.github.io/TotoPark/GreenSpace/",
-  },
-  {
     title: "Drip Café",
     year: "2025",
     description:
@@ -22,13 +14,23 @@ const projects = [
     link: "https://dripcafe-66ca1f.webflow.io/", 
   },
   {
-    title: "Personal Portfolio",
-    year: "2025",
+  title: "Food Decider",
+  year: "2024",
+  description:
+    "A playful React web app that helps users decide what to eat, drink, or snack on when they can’t make up their mind. Built with React, Vite, Tailwind CSS.",
+  img: proj3,
+  link: "https://liuyili2000.github.io/Food-Decider/",
+},
+
+  {
+    title: "Toto Park Website",
+    year: "2023",
     description:
-      "My digital identity — designed and coded in React. Featuring motion, subtle gradients, and an evolving aesthetic direction.",
-    img: proj3,
-    link: "https://liuyili2000.github.io/Portfolio/",
+      "An interactive landing page introducing Toronto’s outdoor parks. Built with HTML, CSS, and JavaScript to highlight playful and natural vibes.",
+    img: proj1,
+    link: "https://liuyili2000.github.io/TotoPark/GreenSpace/",
   },
+  
 ];
 
 const Projects = () => {
